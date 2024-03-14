@@ -3,7 +3,7 @@
 const http = require('http');
 
 const server = http.createServer((req, res) => {
-    // console.log(req)
+    console.log(req);
     if (req.url === '/') {
         res.end('Welcome to our website!');
     } else if (req.url === '/about') {
@@ -17,4 +17,5 @@ const server = http.createServer((req, res) => {
     }
 });
 
-server.listen(5000);
+server.listen(3000);
+console.log('The server is listening on port 3000.');
