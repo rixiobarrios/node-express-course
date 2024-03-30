@@ -1,0 +1,15 @@
+Part 2: Knowledge Check
+Within the starter directory, create a file quizAnswers.txt. Put answers to the following questions in it.
+
+1. Quickly explain how middleware is used in an Express application.
+Answer: Middleware in Express.js are functions that execute during the processing of HTTP requests. They have access to the request and response objects and can either end the request-response cycle or pass control to the next middleware function.
+
+2. What does CRUD stand for?
+Answer: Create, Read, Update and Destroy
+
+3. You are careful to store your sensitive information in a .env file.
+    - How do you get your app to access the information in the .env file?
+    Answer:  Use dotenv and call its config method to load the variables from the .env file into process.env. This makes the variables accessible throughout the application.
+
+    - How do you protect the contents of the .env file so that it is not stored in your Github repository?
+    Answer: To protect the contents of the .env file so it is not stored in your GitHub repository, add .env to the .gitignore file at the root of your project.
