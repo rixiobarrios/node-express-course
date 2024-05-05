@@ -37,9 +37,14 @@ app.use(xss());
 // extra packages
 
 // routes
-app.get('/', (req, res) => {
-    res.send('jobs api');
-});
+// Edit app.js. Comment out the following lines:
+// app.get('/', (req, res) => {
+//     res.send('jobs api');
+// });
+
+// Add the following line below these commented out lines:
+app.use(express.static('public'));
+
 app.use('/api/v1/auth', authRouter);
 // app.use('/api/v1/jobs', jobsRouter);
 app.use('/api/v1/jobs', authenticateUser, jobsRouter);

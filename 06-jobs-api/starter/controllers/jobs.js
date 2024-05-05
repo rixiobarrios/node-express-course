@@ -66,7 +66,11 @@ const deleteJob = async (req, res) => {
     if (!job) {
         throw new NotFoundError(`No job with id ${jobId}`);
     }
-    res.status(StatusCodes.OK).send();
+    // Note: There is an error in the implementation of the delete operation in the jobs controller. The instructor’s guidance is to use this line:
+    // res.status(StatusCodes.OK).send();
+
+    // This is incorrect, because an empty body is not valid JSON. Change it to:
+    res.status(StatusCodes.OK).json({ msg: 'The entry was deleted.' });
 };
 
 module.exports = {
